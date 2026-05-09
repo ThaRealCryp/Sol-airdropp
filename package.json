@@ -9,6 +9,9 @@
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },
+  "pnpm": {
+    "onlyBuiltDependencies": ["bufferutil", "esbuild", "utf-8-validate"]
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
