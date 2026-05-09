@@ -1,8 +1,8 @@
-import { WalletConnectButton } from '@/components/WalletConnectButton';
-import { WalletInfo } from '@/components/WalletInfo';
-import { MobileWalletConnect } from '@/components/MobileWalletConnect';
-import { WalletContextProvider } from '@/contexts/WalletContext';
-import { useSolanaWallet } from '@/hooks/useSolanaWallet';
+import { WalletConnectButton } from './WalletConnectButton';
+import { WalletInfo } from './WalletInfo';
+import { MobileWalletConnect } from './MobileWalletConnect';
+import { WalletContextProvider } from './WalletContext';
+import { useSolanaWallet } from './useSolanaWallet';
 import { Zap } from 'lucide-react';
 
 /**

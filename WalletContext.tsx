@@ -1,8 +1,6 @@
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-phantom';
-import { WalletConnectWalletAdapter } from '@solana/wallet-adapter-walletconnect';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { clusterApiUrl } from '@solana/web3.js';
 import { FC, ReactNode, useMemo } from 'react';
 
@@ -23,24 +21,7 @@ interface WalletContextProviderProps {
 export const WalletContextProvider: FC<WalletContextProviderProps> = ({ children }) => {
   const endpoint = useMemo(() => clusterApiUrl('mainnet-beta'), []);
 
-  const wallets = useMemo(
-    () => [
-      new PhantomWalletAdapter(),
-      new WalletConnectWalletAdapter({
-        network: 'mainnet-beta' as any,
-        options: {
-          projectId: 'solana-airdrop-dashboard',
-          metadata: {
-            name: 'Solana Airdrop Dashboard',
-            description: 'Connect your wallet to claim your SOL airdrop',
-            url: typeof window !== 'undefined' ? window.location.origin : '',
-            icons: ['https://avatars.githubusercontent.com/u/14957082?s=200&v=4'],
-          },
-        },
-      }),
-    ],
-    []
-  );
+  const wallets = useMemo(() => [new PhantomWalletAdapter()], []);
 
   return (
     <ConnectionProvider endpoint={endpoint}>

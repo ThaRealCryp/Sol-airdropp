@@ -1,6 +1,6 @@
 import { Copy, Loader2 } from 'lucide-react';
 import { FC, useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from './components/ui/button';
 
 /**
  * Crypto-Native Minimalist Design: Wallet Info Display

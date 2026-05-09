@@ -1,5 +1,5 @@
 import { useWallet } from '@solana/wallet-adapter-react';
-import { Button } from '@/components/ui/button';
+import { Button } from './components/ui/button';
 import { Smartphone, Loader2 } from 'lucide-react';
 import { FC, useState } from 'react';
 
