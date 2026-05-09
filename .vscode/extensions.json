@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "msjsdiag.debugger-for-chrome",
+    "msjsdiag.debugger-for-edge",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "GitHub.copilot",
+    "ms-vscode.remote-explorer",
+    "ms-vscode-remote.remote-wsl",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode.makefile-tools",
+    "eamodio.gitlens",
+    "ms-vscode.live-server",
+    "Orta.vscode-jest",
+    "firsttris.vscode-jest-runner",
+    "Gruntfuggly.todo-tree",
+    "usernamehw.errorlens"
+  ]
+}
