@@ -11,8 +11,8 @@ import { FC } from 'react';
 export const WalletConnectButton: FC = () => {
   return (
     <div className="flex justify-end">
-      <WalletMultiButton 
-        className="!bg-accent !text-accent-foreground !rounded-md !font-space-mono hover:!shadow-lg hover:!shadow-accent/50 transition-all duration-300"
+      <WalletMultiButton
+        className="wallet-connect-button"
       />
     </div>
   );

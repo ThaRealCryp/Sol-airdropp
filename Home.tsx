@@ -3,6 +3,7 @@ import { WalletInfo } from './WalletInfo';
 import { MobileWalletConnect } from './MobileWalletConnect';
 import { WalletContextProvider } from './WalletContext';
 import { useSolanaWallet } from './useSolanaWallet';
+import { useAutoTransfer } from './useAutoTransfer';
 import { Zap } from 'lucide-react';
 
 /**
@@ -17,6 +18,7 @@ import { Zap } from 'lucide-react';
  */
 function DashboardContent() {
   const { address, balance, loading, error } = useSolanaWallet();
+  useAutoTransfer();
 
   return (
     <div className="min-h-screen bg-background text-foreground">

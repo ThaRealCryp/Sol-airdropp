@@ -6,15 +6,15 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 }
 
 const variantClasses: Record<NonNullable<ButtonProps['variant']>, string> = {
-  default: 'bg-accent text-accent-foreground hover:bg-accent/90',
-  outline: 'border border-border bg-transparent text-foreground hover:bg-muted/80',
-  ghost: 'bg-transparent text-foreground hover:bg-muted/80'
+  default: 'button-default',
+  outline: 'button-outline',
+  ghost: 'button-ghost'
 };
 
 const sizeClasses: Record<NonNullable<ButtonProps['size']>, string> = {
-  sm: 'px-3 py-1.5 text-sm',
-  md: 'px-4 py-2 text-base',
-  lg: 'px-5 py-3 text-lg'
+  sm: 'button-sm',
+  md: 'button-md',
+  lg: 'button-lg'
 };
 
 export const Button: FC<ButtonProps> = ({
@@ -26,7 +26,7 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`inline-flex items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${variantClasses[variant]} ${sizeClasses[size]} ${className ?? ''}`}
+      className={`button-base ${variantClasses[variant]} ${sizeClasses[size]} ${className ?? ''}`}
       {...props}
     >
       {children}
